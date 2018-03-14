@@ -4,7 +4,7 @@
 
 <mapper namespace="com.tsdv.student.mapper.StudentMapper">
 
-    <resultMap id="StudentResultMap" type="studentDTO">
+    <resultMap id="StudentResultMap" type="com.tsdv.student.domain.StudentDTO">
         <result column="FIRST_NAME" property="firstName" />
         <result column="LAST_NAME" property="lastName" />
         <result column="AGE" property="age" />
@@ -13,7 +13,7 @@
     </resultMap>
 
     <select id="findAllStudents" resultMap="StudentResultMap">
-        select * from Student
+        select * from KHOE_NV.Student
     </select>
 
     <!-- <select id="findUserById" resultMap="UserResultMap">
